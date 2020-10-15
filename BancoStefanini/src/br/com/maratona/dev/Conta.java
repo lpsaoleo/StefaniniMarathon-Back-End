@@ -1,14 +1,20 @@
 package br.com.maratona.dev;
 
-public class Conta {
-
+public abstract class Conta {
+	
 	private Integer conta;
 	private Integer agencia;
-	private Double saldo;
-	private Float limite;
-	private Boolean status;
+	private Double  saldo;
+	private EnumStatusConta status;
 	private Long codigoPix;
 	
+	
+	public void setStatus(EnumStatusConta status) {
+		this.status = status;
+	}
+	public EnumStatusConta getStatus() {
+		return status;
+	}
 	public Integer getConta() {
 		return conta;
 	}
@@ -27,30 +33,15 @@ public class Conta {
 	public void setSaldo(Double saldo) {
 		this.saldo = saldo;
 	}
-	public Float getLimite() {
-		return limite;
-	}
-	public void setLimite(Float limite) {
-		this.limite = limite;
-	}
-	public Boolean getStatus() {
-		return status;
-	}
-	public void setStatus(Boolean status) {
-		this.status = status;
-	}
-		
-	public Long getCodigoPix() {
-		return codigoPix;
+	public void sacar(Double valorSaque) {
+		System.out.println("PAI");
+		this.saldo = this.saldo - valorSaque;
 	}
 	public void setCodigoPix(Long codigoPix) {
 		this.codigoPix = codigoPix;
 	}
-	public void depositar(Double valorDeposito) {
-		this.saldo = this.saldo + valorDeposito;
+	public Long getCodigoPix() {
+		return codigoPix;
 	}
 	
-	public void sacar(Double valorSaque) {
-		this.saldo = this.saldo - valorSaque;
-	}
 }
