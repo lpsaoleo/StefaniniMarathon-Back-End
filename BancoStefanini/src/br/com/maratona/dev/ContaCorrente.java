@@ -9,7 +9,7 @@ public class ContaCorrente extends Conta implements ContaPrivate,Emprestimo{
 	}
 	
 	public ContaCorrente(Float limite,Integer agencia) {
-		super();
+		super(); //o super permite acessar os parâmetros da classe pai, no caso o "Integer agencia", que pertence ao pai
 		this.limite = limite;
 	}
 	
@@ -27,9 +27,9 @@ public class ContaCorrente extends Conta implements ContaPrivate,Emprestimo{
 		//saque com CPMF
 	}
 	
-	@Override
+	@Override //O Override implementa métodos da interface
 	public void saqueExtra(Float taxa) {
-		//1.5
+		//Taxa de 1.5%
 	}
 	
 	@Override

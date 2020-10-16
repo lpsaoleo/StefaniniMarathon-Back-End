@@ -30,11 +30,11 @@ public class Run {
 			((ContaCorrente)conta).emprestimo(Float.valueOf(1.5f));
 			conta.setSaldo(Double.valueOf(2500));
 			((ContaCorrente)conta).sacar(2.50);
-			conta.setStatus(EnumStatusConta.ATIVO);
+			conta.setStatus(EnumStatusConta.ATIVA);
 			System.out.println(conta.getStatus().getDescricao());
 			System.out.println(conta.getStatus().getCodigo());
 		}
-		
+		//ArrayList é específico e List é genérico
 		List<Conta> lista = new ArrayList<Conta>();
 		lista.add(conta);
 		lista.add(poupanca);

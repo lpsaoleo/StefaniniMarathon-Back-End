@@ -1,8 +1,10 @@
 package br.com.maratona.dev;
 
 public enum EnumStatusConta {
-	ATIVO(1,"Ativo"),
-	INATIVO(2,"Inativo");
+	ATIVA(1,"Ativa"),
+	INATIVA(2,"Inativa"),
+	SUSPENSA(3,"Suspensa"),
+	BLOQUEADA(4,"Bloqueada");
 	
 	private String  descricao;
 	private Integer codigo;
